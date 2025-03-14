@@ -1,0 +1,207 @@
+{
+    "Informatica" : [
+    {
+        "asin": "01",
+        "question": "Quali di questi linguaggi sono linguaggi di programmazione?",
+        "answers" : [
+            {"text": "Python", "correct": true},
+            {"text": "Javascript", "correct": true},
+            {"text": "C++", "correct": true},
+            {"text": "HTML", "correct": false}
+        ]
+    },
+    {
+        "asin": "02",
+        "question": "Quali sono sistemi operativi?",
+        "answers" : [
+            {"text": "Windows", "correct": true},
+            {"text": "Linux", "correct": true},
+            {"text": "macOS", "correct": true},
+            {"text": "BIOS", "correct": false}
+        ]
+    },
+    {
+        "asin": "03",
+        "question": "Quali di questi database sono relazionali?",
+        "answers" : [
+            {"text": "MySQL", "correct": true},
+            {"text": "PostgreSQL", "correct": true},
+            {"text": "MongoDB", "correct": false},
+            {"text": "Redis", "correct": false}
+        ]
+    },
+    {
+        "asin": "04",
+        "question": "Quali di questi protocolli vengono usati per la posta elettronica?",
+        "answers" : [
+            {"text": "IMAP", "correct": true},
+            {"text": "SMTP", "correct": true},
+            {"text": "POP3", "correct": true},
+            {"text": "FTP", "correct": false}
+        ]
+    },
+    {
+        "asin": "05",
+        "question": "Quali sono linguaggi tipicamente usati per lo sviluppo web front-end?",
+        "answers" : [
+            {"text": "PHP", "correct": false},
+            {"text": "Javascript", "correct": true},
+            {"text": "CSS", "correct": true},
+            {"text": "HTML", "correct": true}
+        ]
+    },
+    {
+        "asin": "06",
+        "question": "Quali strutture dati sono ad accesso LIFO (Last In, First Out)?",
+        "answers" : [
+            {"text": "Stack", "correct": true},
+            {"text": "Queue", "correct": false},
+            {"text": "Array", "correct": false},
+            {"text": "Lista concatenata", "correct": false}
+        ]
+    },
+    {
+        "asin": "07",
+        "question": "Quali di questi strumenti sono sistemi di controllo versione?",
+        "answers" : [
+            {"text": "Git", "correct": true},
+            {"text": "SVN", "correct": true},
+            {"text": "Docker", "correct": false},
+            {"text": "Jenkins", "correct": false}
+        ]
+    },
+    {
+        "asin": "08",
+        "question": "Quali di queste estensioni di file corrispondono a file eseguibili?",
+        "answers" : [
+            {"text": ".exe", "correct": true},
+            {"text": ".bat", "correct": true},
+            {"text": ".sh", "correct": true},
+            {"text": ".txt", "correct": false}
+        ]
+    },
+    {
+        "asin": "09",
+        "question": "Quali metodi HTTP vengono usati per inviare dati a un server?",
+        "answers" : [
+            {"text": "POST", "correct": true},
+            {"text": "PUT", "correct": true},
+            {"text": "PATCH", "correct": true},
+            {"text": "GET", "correct": false}
+        ]
+    },
+    {
+        "asin": "10",
+        "question": "Quali tecnologie vengono utilizzate per la virtualizzazione?",
+        "answers" : [
+            {"text": "Docker", "correct": true},
+            {"text": "VMware", "correct": true},
+            {"text": "VirtualBox", "correct": true},
+            {"text": "Apache", "correct": false}
+        ]
+    }
+    ],
+    
+    "Musica" : [
+        {
+            "asin": "01",
+            "question": "Quali di questi strumenti musicali appartengono alla famiglia degli archi?",
+            "answers" : [
+                {"text": "Violino", "correct": true},
+                {"text": "Viola", "correct": true},
+                {"text": "Violoncello", "correct": true},
+                {"text": "Fagotto", "correct": false}
+            ]
+        },
+        {
+            "asin": "02",
+            "question": "Quali tra questi sono generi musicali?",
+            "answers" : [
+                {"text": "Jazz", "correct": true},
+                {"text": "Blues", "correct": true},
+                {"text": "Reggae", "correct": true},
+                {"text": "Impressionismo", "correct": false}
+            ]
+        },
+        {
+            "asin": "03",
+            "question": "Quali di questi artisti sono considerati icone del rock?",
+            "answers" : [
+                {"text": "The Rolling Stones", "correct": true},
+                {"text": "Queen", "correct": true},
+                {"text": "Led Zeppelin", "correct": true},
+                {"text": "Mozart", "correct": false}
+            ]
+        },
+        {
+            "asin": "04",
+            "question": "Quali di queste sono note musicali?",
+            "answers" : [
+                {"text": "Do", "correct": true},
+                {"text": "Re", "correct": true},
+                {"text": "Mi", "correct": true},
+                {"text": "Ti", "correct": false}
+            ]
+        },
+        {
+            "asin": "05",
+            "question": "Quali strumenti sono comunemente presenti in un'orchestra sinfonica?",
+            "answers" : [
+                {"text": "Oboe", "correct": true},
+                {"text": "Contrabasso", "correct": true},
+                {"text": "Timpani", "correct": true},
+                {"text": "Chitarra elettrica", "correct": false}
+            ]
+        },
+        {
+            "asin": "06",
+            "question": "Quali di questi formati audio digitali sono compressi con perdita di qualità?",
+            "answers" : [
+                {"text": "MP3", "correct": true},
+                {"text": "AAC", "correct": true},
+                {"text": "WAV", "correct": false},
+                {"text": "FLAC", "correct": false}
+            ]
+        },
+        {
+            "asin": "07",
+            "question": "Quali di questi strumenti sono a percussione?",
+            "answers" : [
+                {"text": "Tamburo", "correct": true},
+                {"text": "Maracas", "correct": true},
+                {"text": "Xilofono", "correct": true},
+                {"text": "Tromba", "correct": false}
+            ]
+        },
+        {
+            "asin": "08",
+            "question": "Quali di questi festival musicali sono famosi a livello internazionale?",
+            "answers" : [
+                {"text": "Coachella", "correct": true},
+                {"text": "Glastronbury", "correct": true},
+                {"text": "Tomorrowland", "correct": true},
+                {"text": "Wimbledon", "correct": false}
+            ]
+        },
+        {
+            "asin": "09",
+            "question": "Quali sono le principali chiavi musicali usate nella notazione occidentale?",
+            "answers" : [
+                {"text": "Chiave di Sol", "correct": true},
+                {"text": "Chiave di Fa", "correct": true},
+                {"text": "Chiave di Do", "correct": true},
+                {"text": "Chiave di Mi", "correct": false}
+            ]
+        },
+        {
+            "asin": "10",
+            "question": "Quali di questi software sono utilizzati per la riproduzione musicale?",
+            "answers" : [
+                {"text": "Ableton Live", "correct": true},
+                {"text": "FL Studio", "correct": true},
+                {"text": "Logic Pro", "correct": true},
+                {"text": "Photoshop", "correct": false}
+            ]
+        }
+    ]
+}
