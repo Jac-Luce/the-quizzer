@@ -10,26 +10,29 @@ import dataQuestions from '../src/data/questions.json';
 import { Container, Row, Col } from 'react-bootstrap';
 
 function App() {
-  const [startQuiz, setStartQuiz] = useState(false);
-  const [answers, setAnswers] = useState({});
-  const [questions, setQuestions] = useState([]);
-  const [quizFinished, setQuizFinished] = useState(false);
-  const [resultConfirmed, setResultConfirmed] = useState(false);
-  const [score, setScore] = useState(0);
-  const [correctAnswers, setCorrectAnswers] = useState(0);
-  const [incorrectAnswers, setIncorrectAnswers] = useState(0);
+  const [startQuiz, setStartQuiz] = useState(false); //Stato che determina l'inizio del quiz
+  const [answers, setAnswers] = useState({}); //Stato per memorizzare le risposte
+  const [questions, setQuestions] = useState([]); //Stato per memorizzare le domande
+  const [quizFinished, setQuizFinished] = useState(false); //Stato che determina che il quiz è finito
+  const [resultConfirmed, setResultConfirmed] = useState(false); //Stato che memorizza il risultato del quiz
+  const [score, setScore] = useState(0); //Stato che conta il punteggio totale
+  const [correctAnswers, setCorrectAnswers] = useState(0); //Stato delle domande corrette
+  const [incorrectAnswers, setIncorrectAnswers] = useState(0); //Stato delle domande sbagliate
 
+  //Funzione che controlla i dati dell'utente e inizia quiz
   const quizStart = (data) => {
     setQuestions(dataQuestions[data.subject]);
     setStartQuiz(true);
   };
 
+  //Funzione che controlla il termine del quiz e salva le risposte dell'utente
   const finishQuiz = (answers) => {
     setAnswers(answers);
     setQuizFinished(true);
     setResultConfirmed(false); //Risultati non confermati subito
   };
 
+  //Funzione che aggiorna le risposte in caso di modifica durante il riepilogo
   const updateAnswers = (questionIndex, answerIndex) => {
     setAnswers((prev) => {
       const prevAnswers = prev[questionIndex] || [];
@@ -44,6 +47,7 @@ function App() {
     });
   };
 
+  //Conferma qui e calcolo punteggio
   const confirmResults = () => {
     let correctCount = 0;
     let incorrectCount = 0;
@@ -71,6 +75,7 @@ function App() {
     setResultConfirmed(true);
   };
 
+  //Riavvia quiz e resetta stati 
   const restartQuiz = () => {
     setStartQuiz(false);
     setQuizFinished(false);

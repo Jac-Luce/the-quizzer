@@ -10,7 +10,7 @@ export default function Summary({answers, questions, onUpdateAnswers, onSubmit})
             questions.map((question, index) => (
                 <Container key={index} className="mb-4">
                     <h6>{question.question}</h6>
-                    
+                    {/**Lista risposte per eventuali modifiche */}
                     <ListGroup variant="flush">
                             {question.answers.map((answer, ansIndex) => (
                                 <ListGroup.Item key={ansIndex} action className="border-0">
@@ -28,6 +28,7 @@ export default function Summary({answers, questions, onUpdateAnswers, onSubmit})
             ) : (
                 <p>Errore: domande non disponibili</p>
             )}
+            {/**Bottone che conferma risultato e calcola il punteggio */}
             <Container fluid className="text-center my-4">
                 <Button variant="outline-success"  onClick={onSubmit}>Conferma Risultati</Button>
             </Container>

@@ -5,12 +5,13 @@ import { Container, Button, ListGroup, Pagination } from "react-bootstrap";
 
 export default function Quiz({questions, onFinish}) {
     
-    const [answers, setAnswers] = useState({});
-    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [answers, setAnswers] = useState({}); //Stato per memorizzare le risposte dell'utente
+    const [currentQuestion, setCurrentQuestion] = useState(0); //Indice della domanda corrente
 
+    //Funzione per gestire il cambio di risposta per una domanda specifica
     const answerChange = (questionIndex, answerIndex) => {
         setAnswers((prev) => {
-            const prevAnswers = prev[questionIndex] || []; //Se non esiste inizializza come array vuoto
+            const prevAnswers = prev[questionIndex] || []; //Se non esiste l'arrey ne inizializza uno come array vuoto
             const newAnswers = prevAnswers.includes(answerIndex)
                 ? prevAnswers.filter((a) => a !== answerIndex) //Rimuove la risposta se già selezionata
                 : [...prevAnswers, answerIndex]; //Aggiunge la risposta se non è selezionata
@@ -21,10 +22,12 @@ export default function Quiz({questions, onFinish}) {
         })
     }
 
+    //Funzione che gestisce i tasti precedente/successivo
     const handleNavigation = (direction) => {
         setCurrentQuestion((prev) => Math.max( 0, Math.min(questions.length - 1, prev + direction)))
     };
 
+    //Funzione per la paginazione
     const numberPagination = (index) => {
         setCurrentQuestion(index);
     };
@@ -33,6 +36,7 @@ export default function Quiz({questions, onFinish}) {
         <Container className="text-start">
             {questions.length > 0 && (
             <>
+                {/**Mostra la domanda attuale */}
                 <h2>{questions[currentQuestion].question}</h2>
                 <ListGroup variant="flush">
                     {questions[currentQuestion].answers.map((answer, index) => (
@@ -70,7 +74,7 @@ export default function Quiz({questions, onFinish}) {
             </>
             )}
 
-            {/**Pulsante Avanti visibile solo nell'ultima pagina */}
+            {/**Pulsante Avanti visibile solo nell'ultima domanda */}
             <Container fluid className="text-center mt-5">
                 {currentQuestion === questions.length - 1 && (
                     <Button variant="outline-primary"  onClick={() => onFinish(answers)}>Avanti</Button>)
